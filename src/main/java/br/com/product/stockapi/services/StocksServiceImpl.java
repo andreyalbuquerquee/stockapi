@@ -56,6 +56,7 @@ public class StocksServiceImpl implements StocksService {
     private StockDto createStockDtoByStockClass(Stock stock) {
         return new StockDto(
         stock.getId(), 
+        stock.getName(),
         stock.getTotalSpace(), 
         stock.getUsedSpace()
         );
@@ -64,6 +65,7 @@ public class StocksServiceImpl implements StocksService {
     private StockDto createStockDtoByOptional(Optional<Stock> stockOptional) {
         return new StockDto(
         stockOptional.get().getId(), 
+        stockOptional.get().getName(),
         stockOptional.get().getTotalSpace(), 
         stockOptional.get().getUsedSpace()
         );

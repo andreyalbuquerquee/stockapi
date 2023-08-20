@@ -11,6 +11,8 @@ public class Stock {
     
     @Id
     private String id;
+    private String name;
+    
     private int totalSpace;
     private int usedSpace;
     
@@ -18,6 +20,7 @@ public class Stock {
 
     public Stock(StockDto dto) {
         this.id = dto.id();
+        this.name = dto.name();
         this.totalSpace = dto.totalSpace();
         this.usedSpace = dto.usedSpace();
     }
@@ -28,6 +31,12 @@ public class Stock {
     }
     public void setId(String id) {
         this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
     public int getTotalSpace() {
         return totalSpace;
